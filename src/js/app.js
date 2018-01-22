@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 var app = new Vue({
 	el: '#app',
 	data: {
@@ -10,19 +12,22 @@ var app = new Vue({
 				name: 'Mickey Mouse',
 				email: 'mickeymouse@gmail.com',
 				time: Date.now(),
-				since: 0
+				since: 0,
+				photo: 'https://www.gravatar.com/avatar/?s=100&d=monsterid'
 			},
 			{
 				name: 'Donald Duck',
 				email: 'quackD@gmail.com',
 				time: Date.now(),
-				since: 0
+				since: 0,
+				photo: 'https://www.gravatar.com/avatar/?s=100&d=retro'
 			},
 			{
 				name: 'Goofy',
 				email: 'goofy_all_the_time@gmail.com',
 				time: Date.now(),
-				since: 0
+				since: 0,
+				photo: 'https://www.gravatar.com/avatar/?s=100%d=robohash'
 			},
 		],
 	},
@@ -46,7 +51,9 @@ var app = new Vue({
 			this.people.unshift({
 				  name: this.enteredName,
 				  email: this.enteredEmail,
-				  time: Date.now()
+				  time: Date.now(),
+				  since: 0,
+				  photo: 'https://www.gravatar.com/avatar/' + md5(this.enteredEmail) + '?s=100' + '&d=identicon',
 			})
 
 			if (this.people.length > 4) {

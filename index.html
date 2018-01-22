@@ -7,6 +7,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		
 		<link rel="stylesheet" href="dist/css/app.css">
 	</head>
 	<body>
@@ -16,6 +17,7 @@
 			
 			<ul>
 				<li v-for="user in people">
+					<img v-bind:src="user.photo" alt="">
 					<h3> {{ user.name }} </h3>
 					<p> {{ user.since }} minute<span v-if='user.since != 1'>s</span> ago </p>
 				</li>
@@ -28,6 +30,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.js"></script>
 		<script src="dist/js/app.js"></script>
 
 	</body>

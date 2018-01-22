@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Circus Starter plus the start of the html needed for the Check In project",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "md5": "^2.2.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.6",
+    "eslint": "^4.16.0",
     "eslint-config-google": "^0.9.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
